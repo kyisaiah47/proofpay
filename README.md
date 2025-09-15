@@ -4,6 +4,9 @@
 
 A trustless task payment platform supporting Soft, zkTLS, and Hybrid proof systems on the XION blockchain. Create tasks, submit verifiable proofs, and get paid automatically with cryptographic verification or manual review.
 
+[![YouTube Demo](https://img.shields.io/badge/▶️%20Watch%20on%20YouTube-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=j0CIWGTbssI)
+[![Watch the demo](https://img.youtube.com/vi/j0CIWGTbssI/maxresdefault.jpg)](https://www.youtube.com/watch?v=j0CIWGTbssI)
+
 ## 🎯 Features
 
 - **Soft Proofs**: Manual review for subjective work (content creation, design, etc.)
