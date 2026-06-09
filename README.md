@@ -1,228 +1,72 @@
-# ProofPay - Social Payments Platform
+<div align="center">
 
-<img src="https://rvpptly5bhkny5oc.public.blob.vercel-storage.com/Proof%20of%20Work" alt="Logo" width="150"/>
+<img src="assets/banner.png" alt="banner" width="100%" />
 
-A trustless task payment platform supporting Soft, zkTLS, and Hybrid proof systems on the XION blockchain. Create tasks, submit verifiable proofs, and get paid automatically with cryptographic verification or manual review.
+# 💸 ProofPay
 
-[![YouTube Demo](https://img.shields.io/badge/▶️%20Watch%20on%20YouTube-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=j0CIWGTbssI)
-[![Watch the demo](https://img.youtube.com/vi/j0CIWGTbssI/maxresdefault.jpg)](https://www.youtube.com/watch?v=j0CIWGTbssI)
+**Trustless task payment platform — prove your work, get paid automatically on the XION blockchain**
 
-## 🎯 Features
+[![React Native](https://img.shields.io/badge/React%20Native-Expo-0EA5E9?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![XION](https://img.shields.io/badge/XION-Blockchain-6B46C1?style=for-the-badge)](https://xion.burnt.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE.md)
 
-- **Soft Proofs**: Manual review for subjective work (content creation, design, etc.)
-- **zkTLS Proofs**: Cryptographic verification of API responses (instant, no human review)
-- **Hybrid Proofs**: zkTLS verification + manual review window for complex tasks
-- **Real-time Updates**: Live task status updates via Supabase realtime
-- **Push Notifications**: OneSignal integration for mobile alerts
-- **Secure File Storage**: Signed URLs for evidence uploads
-- **Auto-release Timers**: Hybrid tasks auto-release unless disputed
+🏆 Checkpoint 1 Winner — XION Proof of Concept Hackathon (selected from 2000+ participants)
 
-## 🚀 Quick Demo
+</div>
 
-**One-command setup:**
+<br/>
+
+ProofPay is a trustless task payment platform supporting Soft, zkTLS, and Hybrid proof systems on the XION blockchain. Create tasks, submit verifiable proofs, and get paid automatically — cryptographic verification for objective work, manual review for subjective work, and a hybrid approach for complex scenarios.
+
+## ✨ Features
+
+- **Soft Proofs** — manual review for subjective work (content creation, design, consulting)
+- **zkTLS Proofs** — cryptographic verification of API responses via the XION Dave SDK (instant, zero human review)
+- **Hybrid Proofs** — zkTLS verification plus a manual review window with auto-release timer for complex tasks
+- **Abstraxion wallet auth** — seamless XION wallet connection and smart contract interaction
+- **Real-time updates** — live task status changes via Supabase Realtime
+- **Push notifications** — OneSignal integration for mobile alerts on task updates
+- **Evidence uploads** — signed URL secure file storage for photo and document proofs
+
+## 🎥 Demo
+
+[![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=j0CIWGTbssI)
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | React Native + Expo Router |
+| Language | TypeScript |
+| Blockchain | XION (smart contract integration) |
+| Wallet | Abstraxion (XION wallet auth) |
+| Verification | XION Dave SDK (zkTLS) |
+| Backend | Supabase (PostgreSQL + Realtime) |
+| Notifications | OneSignal |
+
+## 🚀 Getting Started
+
+```bash
+npm install
+```
+
+Copy `.env.example` to `.env` and fill in your values, then:
+
+```bash
+npx expo start
+```
+
+Open in Expo Go by scanning the QR code, or press `i` for iOS / `a` for Android.
+
+### Demo mode (one command)
+
 ```bash
 npm run demo:setup
 ```
 
-This starts:
-- Blockchain indexer (port 3001)
-- Mock zkTLS verifier (port 3002)  
-- React Native app with test data
-- Supabase realtime sync
-
-**Demo takes 3-5 minutes** - see [DEMO.md](DEMO.md) for complete walkthrough.
-
-## �️ Tech Stack
-
-- **React Native** (Expo)
-- **Expo Router** (tab navigation)
-- **TypeScript**
-- **XION Blockchain** (smart contract integration)
-- **Abstraxion** (wallet authentication)
-- **Custom Design System** (for colors, spacing, typography)
-- **React Native** with Expo Router for cross-platform mobile
-- **Tailwind CSS** for styling
-
-## 📁 Folder Structure
-
-```
-app/
-	(tabs)/
-		create.tsx         # Main payment form
-		activity.tsx       # Recent activity feed
-		profile.tsx        # User profile
-	username-setup.tsx   # Username onboarding
-components/
-	SocialPaymentForm.tsx    # Main payment form UI
-	PaymentTabSwitcher.tsx   # Tab navigation
-	...other UI components
-constants/
-	Colors.ts
-	DesignSystem.ts
-hooks/
-	useThemeColor.ts
-android/ios/              # Native project files
-assets/                   # Fonts and images
-```
-
-3. Start sending payments and requests
-
-### Intuitive Payment Flow
-
-## 📝 Key Screens
-
-- **Create Tab:**
-
-  - Select payment type (Help, Request, Pay)
-  - Enter recipient username (display only, not editable)
-  - Enter amount (inline editable)
-  - Select proof type (None, Text, Photo, zkTLS)
-  - Add description (with tab-specific placeholder)
-  - Submit payment/help request
-
-- **Activity Tab:**
-
-  - View recent payments and help requests
-
-- **Profile Tab:**
-
-  - View and edit user profile, wallet address, and settings
-
-- **Username Setup:**
-  - Onboarding for new users with real-time validation
-
-### Innovation
-
-- First social payment app with integrated zkTLS verification
-
-## 🛡️ Proof Types
-
-- **None:** No proof required
-- **Text Proof:** Enter a short explanation
-- **Photo Proof:** Attach a photo
-- **zkTLS Proof:** Zero-knowledge proof for advanced verification
-
-# Clone the repository
-
-## � Blockchain Security
-
-All payments and requests are cryptographically secured and recorded on the XION blockchain. The app uses Abstraxion for wallet authentication and smart contract interaction.
-git clone https://github.com/kyisaiah47/proof-of-work.git
-
-## 🚦 Getting Started
-
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-2. **Start the app:**
-   ```bash
-   npx expo start
-   ```
-3. **Open in Expo Go or simulator:**
-   - Scan the QR code in terminal
-   - Or press `i` for iOS, `a` for Android, `w` for web
-
-# Install dependencies
-
-## 🏆 Hackathon Achievement
-
-- **Checkpoint 1 Winner** - Selected as one of 3 winners from 2000+ participants in XION's "Proof of Concept" hackathon.
-
-# Start the development server
-
-````
-## 📄 License
-
-MIT
-
-
-For questions or contributions, open an issue or pull request on GitHub.
-```bash
-# Run on iOS simulator
-npm run ios
-
-# Run on Android emulator
-npm run android
-
-# Run on web
-npm run web
-````
-
-## 🔗 Key Integrations
-
-### XION Dave SDK
-
-```javascript
-import { DaveSDK } from "@xion/dave-sdk";
-
-// Initialize zkTLS verification
-const proof = await DaveSDK.generateProof(data);
-```
-
-### Abstraxion Wallet
-
-```javascript
-import { useAbstraxionAuth } from "@abstraxion/react";
-
-// Connect wallet and authenticate
-const { connect, account } = useAbstraxionAuth();
-```
-
-## 🎯 Roadmap
-
-### Phase 1: Core Features ✅
-
-- [x] Basic payment flows
-- [x] User registration and friends
-- [x] Text and photo proof verification
-- [x] XION blockchain integration
-
-### Phase 2: Advanced Features 🚧
-
-- [ ] Group payments and bill splitting
-- [ ] Recurring payment requests
-- [ ] Enhanced zkTLS verification
-- [ ] Payment analytics dashboard
-
-### Phase 3: Scale & Growth 🎯
-
-- [ ] Business accounts and invoicing
-- [ ] Integration with external services
-- [ ] Advanced fraud detection
-- [ ] Multi-chain support
-
-## 💡 Use Cases
-
-### Personal
-
-- **Moving Day**: "Help me move for $100" with photo proof of completion
-- **Dinner Split**: "You owe me $25 for dinner" with receipt photo
-- **Airport Pickup**: "Thanks for the ride!" with location verification
-
-### Professional
-
-- **Freelance Work**: Verify task completion before payment release
-- **Service Payments**: Proof of service delivery for contractors
-- **Expense Reimbursement**: Submit receipts with automatic verification
+Starts the blockchain indexer (port 3001), mock zkTLS verifier (port 3002), the React Native app with test data, and Supabase Realtime sync. Full walkthrough in [DEMO.md](DEMO.md).
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🤝 Acknowledgments
-
-- **XION Team** for blockchain infrastructure and hackathon opportunity
-- **Abstraxion** for seamless wallet integration
-- **React Native Community** for mobile development tools
-- **All contributors** who helped shape this project
-
-## 📞 Contact
-
-**Isaiah Kim** - [@kyisaiah47](https://github.com/kyisaiah47)
-
-**Project Link**: https://github.com/kyisaiah47/proof-of-work
-
----
-
-_Built for the XION "Proof of Concept" Hackathon - Making social payments trustless and verifiable._
+MIT — see [LICENSE.md](LICENSE.md) for details.
